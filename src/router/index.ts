@@ -19,8 +19,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: '/pokemon/:name',
     name: 'PokemonDetails',
-    component: PokemonDetails,  
-    // props: true,  
+    component: PokemonDetails,    
   }
 ];
 

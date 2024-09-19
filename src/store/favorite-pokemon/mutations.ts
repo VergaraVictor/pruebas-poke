@@ -16,7 +16,7 @@ export const mutations: MutationTree<FavoritePokemonState> = {
   REMOVE_FAVORITE(state, pokemon: PokemonDetails) {
     state.favoritePokemons = state.favoritePokemons.filter(fav => fav.name !== pokemon.name);
   },
-  SET_SELECTED_POKEMON(state, pokemon: any) { // Asegúrate de que el tipo sea correcto
+  SET_SELECTED_POKEMON(state, pokemon: any) { 
     state.selectedPokemon = pokemon;
   }
 };
