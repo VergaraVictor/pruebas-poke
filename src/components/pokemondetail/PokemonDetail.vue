@@ -1,15 +1,27 @@
 <template>
+  <div>
     <div v-if="loading" class="loading">
-        <p>Loading...</p>
-        <img src="../../assets/pokeball.png" alt="Loading" />
+      <p>Loading...</p>
+      <img src="../../assets/pokeball.png" alt="Loading" />
     </div>
 
-    <div v-if="!loading && pokemon" class="pokemon-detail">
-        <h2 class="pokemon-name">{{ pokemon.name }}</h2>
-        <img :src="pokemon.sprites.front_default" alt="Pokemon image" class="pokemon-image" />
-        <p>Weight: {{ pokemon.weight }}</p>
-        <p>Height: {{ pokemon.height }}</p>
+    <div v-if="pokemon" class="pokemon-detail">
+      <h2>{{ pokemon.name }}</h2>
+      <img :src="pokemon.sprites.front_default" alt="Pokemon image" />
+      <div class="details">
+        <p><strong>Peso:</strong> {{ pokemon.weight }} kg</p>
+        <p><strong>Altura:</strong> {{ pokemon.height }} m</p>
+        <p><strong>Habilidades:</strong></p>
+        <ul>
+          <li v-for="ability in pokemon.abilities" :key="ability.ability.name">{{ ability.ability.name }}</li>
+        </ul>
+        <audio controls v-if="pokemon.cries">
+          <source :src="pokemon.cries.latest" type="audio/ogg">
+          Tu navegador no soporta el elemento de audio.
+        </audio>
+      </div>
     </div>
+  </div>
 </template>
 
 <script lang="ts" src="./PokemonDetail.ts"></script>

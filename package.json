@@ -18,9 +18,11 @@
     "dotenv": "^16.4.5",
     "vue": "^3.2.13",
     "vue-class-component": "^8.0.0-0",
+    "vue-router": "^4.4.5",
     "vuex": "^4.0.2"
   },
   "devDependencies": {
+    "@types/vue-router": "^2.0.0",
     "@typescript-eslint/eslint-plugin": "^5.4.0",
     "@typescript-eslint/parser": "^5.4.0",
     "@vue/cli-plugin-babel": "~5.0.0",

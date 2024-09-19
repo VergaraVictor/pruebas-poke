@@ -1,30 +1,25 @@
 <template>
   <div id="app">
-    <h1>My Pokémon Favorites</h1>
-    <PokemonList />
-    <PokemonDetail />
+    <header>
+      <h1>Pokémon App</h1>
+    </header>
+    <router-view /> 
   </div>
 </template>
 
-<script>
-import PokemonList from '@/components/pokemonlist/PokemonList.vue';
-import PokemonDetail from '@/components/pokemondetail/PokemonDetail.vue';
-
+<script lang="ts">
 export default {
-  components: {
-    PokemonList,
-    PokemonDetail
-  }
+  name: 'App'
 };
 </script>
 
 <style>
-#app {
+/* #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
-}
+} */
 </style>
